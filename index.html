@@ -41,7 +41,7 @@
             </div>
             <div class="about-text">
                 <h2>Piyush Saini</h2>
-                <h2>I'm a 
+                <h2>I'm a
                     <span style="--i:4" data-text="Frontend-Developer"> Frontend-Developer</span>
                     <span style="--i:3" data-text="Coder"> Coder</span>
                     <span style="--i:2" data-text="Frontend-Developer"> Frontend-Developer</span>
@@ -181,10 +181,12 @@
                 <a href="mailto:piyushsainiyt868@gmail.com">
                     <h3>PiyushSainiYt868@gmail.com</h3>
                 </a>
-                <form id="contactForm" action="your-server-endpoint" method="POST">
-                    <input type="text" required placeholder="Enter Your Name">
-                    <input type="email" required placeholder="Enter Your Email">
-                    <textarea required placeholder="Enter Your Message"></textarea>
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="82acfad1-8915-4689-a780-e9d599072811">
+                    <input type="text" name="name" required placeholder="Enter Your Name">
+                    <input type="email" name="email" required placeholder="Enter Your Email">
+                    <textarea required name="message" placeholder="Enter Your Message"></textarea>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                     <button id="lastbutton" type="submit">Submit</button>
                 </form>
             </div>
@@ -209,7 +211,7 @@
         </footer>
     </div>
 
-    <script>
+    <!-- <script>
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault();
             const name = this.querySelector('input[type="text"]').value;
@@ -220,7 +222,7 @@
             console.log('Message:', message);
             this.reset();
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
